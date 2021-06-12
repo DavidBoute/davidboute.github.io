@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/hamburger.css" />
+    <link rel="stylesheet" href="./styles/gallery.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav role="navigation" hamburger-expanded="false" id="navigation">
+        <div id="menuToggle" onclick="toggleHamburgerMenu()">
+          <span id="burger-1"></span>
+          <span id="burger-2"></span>
+          <span id="burger-3"></span>
+        </div>
+
+        <ul id="menu">
+          <a href="#"><li>Over ons</li></a>
+          <a href="#"><li>Onze pakketten</li></a>
+          <a href="#"><li>Info</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+      </nav>
+      <div class="main" id="main">
+        <header scroll-top="true" id="header">
+          <img src="assets/images/placeholder_logo.png" />
+        </header>
+        <div class="back-layer">
+          <img
+            src="assets/images/placeholder_header.jpg"
+            class="main-img"
+            id="main-img"
+          />
+        </div>
+        <div class="front-layer">
+
+          <div class="gallery">
+            <h1>Pinapple party</h1>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
+                cursus elit. Aenean interdum tincidunt dolor quis malesuada.
+                Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                Vestibulum consectetur risus sit amet elit hendrerit, quis ultricies
+                ex dictum. Vestibulum eu bibendum orci. Proin vel elit accumsan
+                neque euismod cursus. Cras hendrerit tortor quis ante ultricies
+                finibus a sed metus. Mauris mollis ultrices lacus non sagittis. Cras
+                ante nulla, laoreet eu porttitor congue, accumsan eget ipsum. Sed
+                consectetur arcu a mollis tempus. Aliquam laoreet eget magna nec
+                dignissim. Nulla venenatis consequat viverra. Maecenas finibus
+                feugiat porttitor. Donec id augue ut massa varius ultricies et quis
+                elit. Sed nibh ex, iaculis vel sagittis quis, auctor non mi. Ut
+                interdum magna eget orci sodales pretium. Cras posuere felis at est
+                pulvinar eleifend. Nam vel eros eleifend risus maximus maximus.
+                Proin iaculis vehicula metus vitae interdum. Morbi gravida, purus
+                non pellentesque consectetur, tortor sem gravida enim, in finibus
+                odio erat vitae orci. Praesent at velit nec nunc sollicitudin
+                ornare. Etiam vestibulum nibh a nisl bibendum, vel cursus magna
+                laoreet. Nulla tempor, lorem nec tristique dignissim, tellus dolor
+                porttitor tellus, at ullamcorper est arcu at elit. Suspendisse
+                laoreet pretium justo, quis volutpat quam tincidunt eget. Nam
+                tristique in nisi ut semper.
+              </p>
+            </div>
+            <figure class="gallery__item">
+              <img src="assets/images/placeholder_party_1.jpg" class="gallery__img" alt="Image 1">
+            </figure>
+            <figure class="gallery__item">
+              <img src="assets/images/placeholder_party_1.jpg" class="gallery__img" alt="Image 1">
+            </figure>
+            <figure class="gallery__item">
+              <img src="assets/images/placeholder_party_1.jpg" class="gallery__img" alt="Image 2">
+            </figure>
+            <figure class="gallery__item">
+              <img src="assets/images/placeholder_party_1.jpg" class="gallery__img" alt="Image 3">
+            </figure>
+            <figure class="gallery__item">
+              <img src="assets/images/placeholder_party_1.jpg" class="gallery__img" alt="Image 4">
+            </figure>
+            <figure class="gallery__item">
+              <img src="assets/images/placeholder_party_1.jpg" class="gallery__img" alt="Image 5">
+            </figure>
+            <figure class="gallery__item">
+              <img src="assets/images/placeholder_party_1.jpg" class="gallery__img" alt="Image 6">
+            </figure>
+          </div>
+
+      </div>
+      <div
+        class="m-menu__backdrop"
+        id="backdrop"
+        onclick="toggleHamburgerMenu()"
+      ></div>
+    </div>
+
+    <!-- scripts -->
+    <script src="./scripts/hamburger.js"></script>
+    <script src="./scripts/header.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/hamburger.css" />
+    <link rel="stylesheet" href="./styles/form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav role="navigation" hamburger-expanded="false" id="navigation">
+        <div id="menuToggle" onclick="toggleHamburgerMenu()">
+          <span id="burger-1"></span>
+          <span id="burger-2"></span>
+          <span id="burger-3"></span>
+        </div>
+
+        <ul id="menu">
+          <a href="#"><li>Over ons</li></a>
+          <a href="#"><li>Onze pakketten</li></a>
+          <a href="#"><li>Info</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+      </nav>
+      <div class="main" id="main">
+        <header scroll-top="true" id="header">
+          <img src="assets/images/placeholder_logo.png" />
+        </header>
+        <div class="back-layer">
+          <img
+            src="assets/images/placeholder_header.jpg"
+            class="main-img"
+            id="main-img"
+          />
+        </div>
+        <div class="front-layer">
+          <div class="grid">
+            <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19996.610028769523!2d3.4719467569335904!3d51.20845935205668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c35dfa46c88b4f%3A0x75009b083f49253a!2sEuro%20Shop%20Maldegem!5e0!3m2!1snl!2sbe!4v1621170017951!5m2!1snl!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <form style="width: 500px; background-color: white;" id="contactForm" class="form">
+              <div class="row">
+                <input type="email" name="mail" placeholder="E-mailadres*"
+                required>
+              </div>
+              <div class="row">
+                <input type="text" name="firstName" placeholder="Voornaam*"  required>
+                <input type="text" name="name" placeholder="Naam*"  required>
+              </div>
+              <div class="row">
+                <input type="text" name="phone" placeholder="Telefoon">
+              </div>
+              <div class="row">
+                <input type="text" name="address" placeholder="Adres">
+              </div>
+              <div class="row">
+                <input type="date" name="date" placeholder="Selecteer de gewenste datum">
+                <input type="number" name="amount" placeholder="Aantal personen">
+              </div>
+              <div  class="row">
+                <fieldset form="contactForm">
+                  <legend>Selecteer de paketten waarin je interesse hebt</legend>
+
+                  <input type="checkbox" id="pakket1" name="pakketten" >
+                  <label for="pakket1" >Pinapple Party</label><br/>
+
+                  <input type="checkbox" id="pakket2" name="pakketten" >
+                  <label for="pakket2" >Pinapple Party</label><br/>
+
+                  <input type="checkbox" id="pakket3" name="pakketten" >
+                  <label for="pakket3" >Pinapple Party</label><br/>
+
+                  <input type="checkbox" id="pakket4" name="pakketten" >
+                  <label for="pakket4" >Pinapple Party</label><br/>
+
+                </fieldset>
+              </div>
+              <div  class="row">
+                <textarea name="comment" placeholder="Opmerkingen" form="contactForm" rows="4"></textarea>
+              </div>
+              <div  class="row">
+                <button type="submit" value="Submit">Versturen</button>
+              </div>
+            </form>
+          </div>
+
+      </div>
+      <div
+        class="m-menu__backdrop"
+        id="backdrop"
+        onclick="toggleHamburgerMenu()"
+      ></div>
+    </div>
+
+    <!-- scripts -->
+    <script src="./scripts/hamburger.js"></script>
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/form.js"></script>
+  </body>
+</html>

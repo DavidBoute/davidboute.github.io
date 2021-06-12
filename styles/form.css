@@ -1,0 +1,56 @@
+.form {
+  margin: 0 auto;
+}
+
+.form .row {
+  padding: 4px 8px;
+  display: flex;
+}
+
+.form .row > * {
+  flex: 1 1 auto;
+  line-height: 2em;
+  /* border-radius: 0.5em; */
+}
+
+.form .row > input:focus-visible,
+textarea:focus-visible {
+  outline: unset;
+}
+
+.form .row > input {
+  height: 3em;
+  padding: 0px 8px;
+  border: 1px solid black;
+}
+
+.form .row > textarea {
+  padding: 0px 8px;
+}
+
+.form .row > :not(:last-child) {
+  margin-right: 8px;
+}
+
+.form input.error {
+  border: 2px solid red;
+  animation: shake 0.25s;
+  animation-iteration-count: 2;
+}
+
+.form fieldset {
+  margin: 0;
+}
+
+.form legend {
+  text-align: center;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(2px, 0px);
+  }
+  50% {
+    transform: translate(-2px, 0px);
+  }
+}

@@ -1,0 +1,176 @@
+#navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+  z-index: 3;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  pointer-events: all;
+}
+
+#menu a {
+  text-decoration: none;
+  color: var(--main-color);
+
+  transition: color 0.3s ease;
+}
+
+#menu a:hover {
+  color: tomato;
+}
+
+/*
+  * Just a quick hamburger
+  */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 6px;
+  position: relative;
+
+  background: var(--main-color-2);
+  border-radius: 3px;
+
+  z-index: 3;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    opacity 0.55s ease;
+}
+
+#menuToggle span#burger-1 {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span#burger-2 {
+  transform-origin: 4px 0px;
+}
+
+#menuToggle span#burger-3 {
+  transform-origin: 0% 100%;
+}
+
+/*
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+#navigation[hamburger-expanded="true"] #menuToggle span {
+  opacity: 1;
+}
+
+#navigation[hamburger-expanded="true"] #menuToggle span#burger-1 {
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+#navigation[hamburger-expanded="true"] #menuToggle span#burger-2 {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#navigation[hamburger-expanded="true"] #menuToggle span#burger-3 {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  z-index: 2;
+
+  height: 100%;
+  margin: 0;
+  padding-top: 72px;
+  padding-bottom: 36px;
+
+  background: #fefefe;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#menu ul {
+  list-style-type: none;
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menu .logo {
+  width: 80%;
+  align-self: center;
+}
+
+#navigation[hamburger-expanded="true"] #menu {
+  transform: none;
+  pointer-events: all;
+}
+
+.m-menu__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--main-color);
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.m-menu__backdrop[visible="true"] {
+  bottom: 0;
+  right: 0;
+  opacity: 0.36;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  height: 100%;
+}
+
+@media only screen and (min-width: 62em) {
+  /* #menuToggle {
+    display: none;
+  } */
+
+  /* #menu {
+    transform: none;
+    transition: none;
+  } */
+
+  /* #navigation {
+    position: static;
+  } */
+
+  /* .main {
+    display: grid;
+  } */
+
+  /* .container {
+    grid-template-columns: 300px auto;
+  } */
+}
