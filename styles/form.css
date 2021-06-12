@@ -1,5 +1,7 @@
 .form {
   margin: 0 auto;
+  flex: 0 1 550px;
+  max-width: 100%;
 }
 
 .form .row {
@@ -10,7 +12,20 @@
 .form .row > * {
   flex: 1 1 auto;
   line-height: 2em;
-  /* border-radius: 0.5em; */
+  border-radius: 0.5em;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid transparent;
+}
+
+.form .row > input:hover,
+.form .row > input:focus,
+.form .row > textarea:hover,
+.form .row > textarea:focus {
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.32);
+}
+
+.form .row > button {
+  border: 1px solid black;
 }
 
 .form .row > input:focus-visible,
@@ -21,7 +36,8 @@ textarea:focus-visible {
 .form .row > input {
   height: 3em;
   padding: 0px 8px;
-  border: 1px solid black;
+  border: 1px solid transparent;
+  min-width: 150px;
 }
 
 .form .row > textarea {
@@ -33,9 +49,14 @@ textarea:focus-visible {
 }
 
 .form input.error {
-  border: 2px solid red;
+  border: 1px solid red;
   animation: shake 0.25s;
   animation-iteration-count: 2;
+  box-shadow: 0 0 8px 2px rgba(255, 0, 0, 0.12);
+}
+
+.form input.error:hover {
+  box-shadow: 0 0 8px 2px rgba(255, 0, 0, 0.32);
 }
 
 .form fieldset {

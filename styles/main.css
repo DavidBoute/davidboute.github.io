@@ -1,8 +1,8 @@
 :root {
   /* --main-bg-color: #fcd0d0; */
-  --main-bg-color: #fefefe;
-  --main-color: #232323;
-  --main-color-2: #cf5b37;
+  --main-bg-color: 254, 254, 254;
+  --main-color: 35, 35, 35;
+  --main-color-2: 207, 91, 55;
   --spacing: 8px;
 }
 
@@ -12,7 +12,7 @@ body {
 
   overflow: hidden;
 
-  color: var(--main-color);
+  color: rgb(var(--main-color));
   font-family: "Raleway", "Open Sans";
 
   font-size: 20px;
@@ -25,7 +25,7 @@ h4,
 h5,
 h6 {
   font-family: "Indie Flower", "Open Sans";
-  color: var(--main-color-2);
+  color: rgb(var(--main-color-2));
 }
 
 h1 {
@@ -44,17 +44,6 @@ h1:not(:first-child) {
   max-width: 920px;
 }
 
-.front-layer {
-  padding: 24px 48px;
-  background: var(--main-bg-color);
-}
-
-.back-layer {
-  margin-top: -72px;
-  position: relative;
-  z-index: -10;
-}
-
 .tile-grid {
   width: 80%;
   display: grid;
@@ -68,7 +57,7 @@ h1:not(:first-child) {
 .tile {
   height: 100%;
   border-radius: 16px;
-  box-shadow: 0px 0px 16px var(--main-color-2);
+  box-shadow: 0 0 8px 2px rgba(var(--main-color-2), 0.32);
 }
 
 .tile .caption {
@@ -141,6 +130,7 @@ h1:not(:first-child) {
   height: 72px;
   left: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .image-brush.top {
@@ -155,10 +145,10 @@ h1:not(:first-child) {
 }
 
 .image-brush path {
-  fill: var(--main-bg-color);
+  fill: rgb(var(--main-bg-color));
 }
 .image-brush.invert path {
-  fill: var(--main-color-2);
+  fill: rgb(var(--main-color-2));
 }
 
 .image-container .overlay {
@@ -232,6 +222,10 @@ header {
   z-index: 1;
 }
 
+header a {
+  margin: auto;
+}
+
 header img {
   margin: auto;
   height: 64px;
@@ -239,7 +233,7 @@ header img {
 
 header[scroll-top="false"] {
   opacity: 1;
-  box-shadow: 0px 0px 12px -2px var(--main-color);
+  box-shadow: 0 0 8px 2px rgba(var(--main-color), 0.32);
 }
 
 img.main-img {
@@ -254,11 +248,12 @@ img.title-img {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 100%;
+  display: flex;
+  max-width: 1200px;
   justify-content: center;
   gap: 8px;
+  margin: auto;
+  flex-wrap: wrap-reverse;
 }
 
 .grid .map {
@@ -275,28 +270,13 @@ img.title-img {
 
 @media only screen and (min-width: 42em) {
   .tile-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* menu becomes visible */
-@media only screen and (min-width: 62em) {
-  .container {
-    overflow: hidden;
-  }
-
-  .main {
-    overflow: auto;
-  }
-
-  .tile-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (min-width: 82em) {
   .tile-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -306,7 +286,7 @@ header + * {
 
 .static {
   padding: 24px;
-  background: var(--main-bg-color);
+  background: rgb(var(--main-bg-color));
 }
 .parallax.bg1::after {
   background-image: url("https://placekitten.com/g/1600/900");
@@ -319,6 +299,10 @@ header + * {
 
 .bg3::after {
   background-image: url("https://placekitten.com/g/1024/720?image=9");
+}
+
+.bg4::after {
+  background-image: url("../assets/images/placeholder_header.jpg");
 }
 
 .parallax.fixed::after {
@@ -356,12 +340,12 @@ header + * {
   perspective: 2px;
   perspective-origin: center;
   transform-style: preserve-3d;
-  /* background-color: var(--main-bg-color); */
+  /* background-color: rgb(var(--main-bg-color)); */
 }
 
 .section.invert {
-  background-color: var(--main-color-2);
-  color: var(--main-bg-color);
+  background-color: rgb(var(--main-color-2));
+  color: rgb(var(--main-bg-color));
 }
 
 .section.invert h1,
@@ -370,7 +354,7 @@ header + * {
 .section.invert h4,
 .section.invert h5,
 .section.invert h6 {
-  color: var(--main-bg-color);
+  color: rgb(var(--main-bg-color));
 }
 
 .footer {
