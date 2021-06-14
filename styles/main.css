@@ -44,6 +44,16 @@ h1:not(:first-child) {
   max-width: 920px;
 }
 
+.text-container > .iframe-small {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+.text-container > .iframe-large {
+  max-width: 100%;
+  display: none;
+}
+
 .tile-grid {
   width: 80%;
   display: grid;
@@ -109,6 +119,10 @@ h1:not(:first-child) {
   background-color: rgba(38, 225, 38, 0.64);
 }
 
+svg.arrow {
+  stroke: red;
+}
+
 .image {
   position: absolute;
   top: 0;
@@ -125,22 +139,27 @@ h1:not(:first-child) {
   transition: all 0.5s ease-out;
 }
 
+object[type="image/svg+xml"] {
+  visibility: hidden;
+}
+
 .image-brush {
   position: absolute;
   height: 72px;
   left: 0;
   width: 100%;
   z-index: 1;
+  max-height: max(5vw, 24px);
 }
 
 .image-brush.top {
-  margin-top: -10px;
+  margin-top: -2px;
   top: 0;
 }
 
 .image-brush.bottom {
   transform: rotate(-180deg);
-  margin-bottom: -10px;
+  margin-bottom: -2px;
   bottom: 0;
 }
 
@@ -271,6 +290,15 @@ img.title-img {
 @media only screen and (min-width: 42em) {
   .tile-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .text-container > .iframe-small {
+    max-width: 100%;
+    display: none;
+  }
+  .text-container > .iframe-large {
+    max-width: 100%;
+    display: block;
   }
 }
 

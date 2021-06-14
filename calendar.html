@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/hamburger.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav role="navigation" hamburger-expanded="false" id="navigation">
+        <div id="menuToggle" onclick="toggleHamburgerMenu()">
+          <span id="burger-1"></span>
+          <span id="burger-2"></span>
+          <span id="burger-3"></span>
+        </div>
+
+        <div id="menu">
+          <ul>
+            <a href="./index.html"><li>Home</li></a>
+            <a href="#"><li>Onze pakketten</li></a>
+            <a href="#"><li>Kalender</li></a>
+            <a href="./contact.html"><li>Contact</li></a>
+          </ul>
+          <img class="logo" src="assets/images/temp_logo.jpg" />
+        </div>
+      </nav>
+      <div class="main wrapper" id="main">
+        <header scroll-top="true" id="header">
+          <img src="assets/images/temp_logo.jpg" />
+        </header>
+
+        <section class="section parallax bg1">
+          <object
+            data="assets/images/brush.svg"
+            type="image/svg+xml"
+            class="image-brush bottom"
+          ></object>
+        </section>
+        <div id="scroll-marker"></div>
+        <section class="section static">
+          <div class="text-container">
+            <object
+              data="assets/images/arrow_36.svg"
+              type="image/svg+xml"
+              class="arrow"
+            ></object>
+
+            <iframe
+              class="iframe-small"
+              src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBrussels&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=1&amp;showTz=0&amp;showDate=1&amp;mode=AGENDA&amp;src=bmwuYmUjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23009688"
+              style="border-width: 0"
+              width="400"
+              height="600"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+            <iframe
+              class="iframe-large"
+              src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBrussels&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=1&amp;showTz=0&amp;showDate=1&amp;mode=MONTH&amp;src=bmwuYmUjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23009688"
+              style="border-width: 0"
+              width="800"
+              height="600"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
+        </section>
+        <section class="section parallax bg2">
+          <object
+            data="assets/images/brush.svg"
+            type="image/svg+xml"
+            class="image-brush top"
+          ></object>
+          <object
+            data="assets/images/brush.svg"
+            type="image/svg+xml"
+            class="image-brush bottom invert"
+          ></object>
+        </section>
+        <section class="section static invert">
+          <div class="text-container">
+            <h1 style="margin: 0">Party in a box</h1>
+            <div class="footer">
+              <div>
+                <h2>Contact</h2>
+                <p>Straat nr</p>
+                <p>9990 Maldegem</p>
+                <p>0944/12 34 56</p>
+                <p>partyinabox@gmail.com</p>
+              </div>
+              <div>
+                <h2>Volg ons op</h2>
+                <p>facebook</p>
+                <p>tiktok</p>
+                <p>whatever</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div
+        class="m-menu__backdrop"
+        id="backdrop"
+        onclick="toggleHamburgerMenu()"
+      ></div>
+    </div>
+
+    <!-- scripts -->
+    <script src="./scripts/hamburger.js"></script>
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/svg.js"></script>
+  </body>
+</html>
