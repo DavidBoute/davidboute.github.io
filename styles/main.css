@@ -44,6 +44,15 @@ h1:not(:first-child) {
   max-width: 920px;
 }
 
+.text-container > .align-right {
+  width: 800px;
+  max-width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-right: 16px;
+}
+
 .text-container > .iframe-small {
   max-width: 100%;
   display: block;
@@ -121,6 +130,9 @@ h1:not(:first-child) {
 
 svg.arrow {
   stroke: red;
+  transform: rotate(-180deg);
+  margin-bottom: -12px;
+  margin-left: -16px;
 }
 
 .image {
