@@ -89,7 +89,7 @@
           <div class="grid">
             <iframe
               class="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19996.610028769523!2d3.4719467569335904!3d51.20845935205668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c35dfa46c88b4f%3A0x75009b083f49253a!2sEuro%20Shop%20Maldegem!5e0!3m2!1snl!2sbe!4v1621170017951!5m2!1snl!2sbe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.6938067135734!2d3.4501411157589374!3d51.2062934795868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c35dfb9048fb33%3A0x72f531968652cd5a!2sZwarte%20Zusterslaan%2045%2C%209990%20Maldegem!5e0!3m2!1snl!2sbe!4v1626114814240!5m2!1snl!2sbe"
               width="600"
               height="450"
               style="border: 0"
@@ -98,66 +98,76 @@
             ></iframe>
             <form id="contactForm" class="form">
               <div class="row">
+                <label for="email">Email</label>
                 <input
                   type="email"
                   name="mail"
-                  placeholder="E-mailadres*"
+                  placeholder="voornaam.naam@internet.be (verplicht veld)"
                   required
                 />
               </div>
               <div class="row">
+                <label for="name">Naam</label>
                 <input
                   type="text"
-                  name="firstName"
-                  placeholder="Voornaam*"
+                  name="name"
+                  placeholder="Voornaam Naam (verplicht veld)"
                   required
                 />
-                <input type="text" name="name" placeholder="Naam*" required />
               </div>
               <div class="row">
-                <input type="text" name="phone" placeholder="Telefoon" />
+                <label for="phone">Telefoon</label>
+                <input type="text" name="phone" placeholder="0494 12 34 56" />
               </div>
               <div class="row">
+                <label for="address">Adres</label>
                 <input type="text" name="address" placeholder="Adres" />
               </div>
               <div class="row">
+                <label for="date">Gewenste datum</label>
                 <input
                   type="date"
                   name="date"
                   placeholder="Selecteer de gewenste datum"
                 />
+              </div>
+              <div class="row">
+                <label for="amount">Aantal personen</label>
                 <input
                   type="number"
                   name="amount"
+                  min="1"
+                  max="20"
                   placeholder="Aantal personen"
                 />
               </div>
               <div class="row">
-                <fieldset form="contactForm">
-                  <legend>
-                    Selecteer de paketten waarin je interesse hebt
-                  </legend>
-
+                <label for="themes">Paketten waarin je interesse hebt</label>
+                <fieldset form="contactForm" name="themes">
                   <input type="checkbox" id="pakket1" name="pakketten" />
-                  <label for="pakket1">Pinapple Party</label><br />
+                  <label for="pakket1"
+                    ><img src="assets/images/placeholder_party_1.jpg"
+                  /></label>
 
                   <input type="checkbox" id="pakket2" name="pakketten" />
-                  <label for="pakket2">Pinapple Party</label><br />
+                  <label for="pakket2"
+                    ><img src="assets/images/placeholder_party_1.jpg"
+                  /></label>
 
                   <input type="checkbox" id="pakket3" name="pakketten" />
-                  <label for="pakket3">Pinapple Party</label><br />
+                  <label for="pakket3"
+                    ><img src="assets/images/placeholder_party_1.jpg"
+                  /></label>
 
                   <input type="checkbox" id="pakket4" name="pakketten" />
-                  <label for="pakket4">Pinapple Party</label><br />
+                  <label for="pakket4"
+                    ><img src="assets/images/placeholder_party_1.jpg"
+                  /></label>
                 </fieldset>
               </div>
               <div class="row">
-                <textarea
-                  name="comment"
-                  placeholder="Opmerkingen"
-                  form="contactForm"
-                  rows="4"
-                ></textarea>
+                <label for="comment">Extra vragen</label>
+                <textarea name="comment" form="contactForm" rows="4"></textarea>
               </div>
               <div class="row">
                 <button type="submit" value="Submit">Versturen</button>

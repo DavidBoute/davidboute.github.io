@@ -7,29 +7,52 @@
 .form .row {
   padding: 4px 8px;
   display: flex;
+  flex-direction: column;
 }
 
-.form .row > * {
-  flex: 1 1 auto;
+.form .row > label {
+  padding: 4px 12px;
+  font-size: 0.6em;
+  font-weight: 400;
+  opacity: 0.86;
+}
+
+.form *::placeholder {
+  opacity: 0.86;
+  font-size: 0.9em;
+}
+
+.form .row > input,
+.form .row > textarea,
+.form .row > fieldset,
+.form .row > button {
   line-height: 2em;
   border-radius: 0.5em;
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.06);
   border: 1px solid transparent;
+  width: 100%;
 }
 
 .form .row > input:hover,
 .form .row > input:focus,
 .form .row > textarea:hover,
-.form .row > textarea:focus {
+.form .row > textarea:focus,
+.form .row > fieldset:hover,
+.form .row > fieldset:focus,
+.form .row > button:hover,
+.form .row > button:focus {
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.32);
 }
 
 .form .row > button {
-  border: 1px solid black;
+  margin-top: 12px;
+  background-color: rgba(var(--main-color-2));
+  color: rgba(var(--main-bg-color), 0.86);
+  padding: 0px 8px;
 }
 
 .form .row > input:focus-visible,
-textarea:focus-visible {
+.form .row > textarea:focus-visible {
   outline: unset;
 }
 
@@ -42,10 +65,6 @@ textarea:focus-visible {
 
 .form .row > textarea {
   padding: 0px 8px;
-}
-
-.form .row > :not(:last-child) {
-  margin-right: 8px;
 }
 
 .form input.error {
@@ -61,10 +80,80 @@ textarea:focus-visible {
 
 .form fieldset {
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
 }
 
-.form legend {
+.form fieldset input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.form fieldset label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: fit-content;
+}
+
+.form fieldset label::before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid rgb(var(--main-color-2));
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
   text-align: center;
+  line-height: 24px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+  z-index: 1;
+  font-size: 16px;
+}
+
+.form fieldset label img {
+  width: 100%;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+.form fieldset :checked + label::before {
+  content: "✓";
+  background-color: rgb(var(--main-color-2));
+  transform: scale(1);
+}
+
+.form fieldset:hover :focus + label img {
+  box-shadow: none;
+}
+
+.form fieldset :focus + label img {
+  box-shadow: 0 0 5px rgb(var(--main-color-2));
+}
+
+.form fieldset:hover label:hover img {
+  box-shadow: 0 0 5px rgb(var(--main-color-2));
+}
+
+.form fieldset :checked + label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px rgb(var(--main-color-2));
+  z-index: -1;
 }
 
 @keyframes shake {
