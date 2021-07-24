@@ -65,6 +65,12 @@ h1:not(:first-child) {
   margin: auto;
 }
 
+.text-container > .text-with-aside {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
 .tile-grid {
   width: 80%;
   display: grid;
@@ -74,6 +80,8 @@ h1:not(:first-child) {
 
   align-items: stretch;
   margin: auto;
+
+  grid: auto / repeat(auto-fit, minmax(250px, 1fr));
 }
 .tile {
   height: 100%;
@@ -287,6 +295,7 @@ img.title-img {
   gap: 8px;
   margin: auto;
   flex-wrap: wrap-reverse;
+  grid: auto / repeat(auto-fit, minmax(15em, 1fr));
 }
 
 .grid .map {
@@ -303,7 +312,7 @@ img.title-img {
 
 @media only screen and (min-width: 42em) {
   .tile-grid {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
   }
 
   .text-container > .iframe-small {
@@ -322,7 +331,7 @@ img.title-img {
 
 @media only screen and (min-width: 82em) {
   .tile-grid {
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
   }
 }
 

@@ -28,7 +28,6 @@
 
 .gallery > :nth-child(1) {
   grid-area: a;
-  background-color: cadetblue;
   align-items: center;
   display: flex;
 }
